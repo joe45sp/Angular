@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   showSecret = false;
-  btnClickCount = 0;
   logs = [];
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
@@ -36,6 +35,6 @@ export class ServersComponent implements OnInit {
 
   onDisplayDetails() {
     this.showSecret = !this.showSecret;
-    this.logs.push(this.logs.length + 1);
+    this.logs.push(new Date());
   }
 }
